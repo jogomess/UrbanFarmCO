@@ -1,0 +1,61 @@
+﻿@page
+@model UrbanFarmCOWeb.Pages.Fornecedor.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "Fornecedor";
+}
+
+<h1>Edit</h1>
+
+<h4>Fornecedor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Fornecedor.FornecedorID" />
+            <div class="form-group">
+                <label asp-for="Fornecedor.Nome" class="control-label"></label>
+                <input asp-for="Fornecedor.Nome" class="form-control" />
+                <span asp-validation-for="Fornecedor.Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fornecedor.CNPJ" class="control-label"></label>
+                <input asp-for="Fornecedor.CNPJ" class="form-control" />
+                <span asp-validation-for="Fornecedor.CNPJ" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fornecedor.Endereco" class="control-label"></label>
+                <input asp-for="Fornecedor.Endereco" class="form-control" />
+                <span asp-validation-for="Fornecedor.Endereco" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fornecedor.Telefone" class="control-label"></label>
+                <input asp-for="Fornecedor.Telefone" class="form-control" />
+                <span asp-validation-for="Fornecedor.Telefone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fornecedor.Email" class="control-label"></label>
+                <input asp-for="Fornecedor.Email" class="form-control" />
+                <span asp-validation-for="Fornecedor.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fornecedor.DataCadastro" class="control-label"></label>
+                <input asp-for="Fornecedor.DataCadastro" class="form-control" />
+                <span asp-validation-for="Fornecedor.DataCadastro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
