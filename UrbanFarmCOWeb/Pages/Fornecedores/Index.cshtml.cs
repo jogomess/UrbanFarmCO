@@ -19,11 +19,11 @@ namespace UrbanFarmCOWeb.Pages.Fornecedor
             _context = context;
         }
 
-        public IList<UrbanFarmCOWeb.Models.Fornecedor> Fornecedor { get;set; } = default!;
+        public IList<UrbanFarmCOWeb.Models.Fornecedor> Fornecedores { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
-            Fornecedor = await _context.Fornecedores.ToListAsync();
+            Fornecedores = await _context.Fornecedores.ToListAsync();
         }
     }
 }

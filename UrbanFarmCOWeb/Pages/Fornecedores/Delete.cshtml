@@ -3,7 +3,7 @@
 
 @{
     ViewData["Title"] = "Delete";
-    Layout = "Fornecedor";
+    Layout = "_Layout";
 }
 
 <h1>Delete</h1>
@@ -43,12 +43,7 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Fornecedor.Email)
         </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Fornecedor.DataCadastro)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Fornecedor.DataCadastro)
-        </dd>
+        
     </dl>
     
     <form method="post">

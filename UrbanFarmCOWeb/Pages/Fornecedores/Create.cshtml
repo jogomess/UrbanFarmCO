@@ -3,7 +3,7 @@
 
 @{
     ViewData["Title"] = "Create";
-    Layout = "Fornecedor";
+    Layout = "_Layout";
 }
 
 <h1>Create</h1>
@@ -39,11 +39,7 @@
                 <input asp-for="Fornecedor.Email" class="form-control" />
                 <span asp-validation-for="Fornecedor.Email" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Fornecedor.DataCadastro" class="control-label"></label>
-                <input asp-for="Fornecedor.DataCadastro" class="form-control" />
-                <span asp-validation-for="Fornecedor.DataCadastro" class="text-danger"></span>
-            </div>
+            
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

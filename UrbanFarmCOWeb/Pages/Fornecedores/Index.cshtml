@@ -2,66 +2,63 @@
 @model UrbanFarmCOWeb.Pages.Fornecedor.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
-    Layout = "Fornecedor";
+    ViewData["Title"] = "Lista de Fornecedores";
+    Layout = "_Layout";
 }
 
-<h1>Index</h1>
+<h1>Fornecedores</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create">Adicionar Novo Fornecedor</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Fornecedor[0].Nome)
+                @Html.DisplayNameFor(model => model.Fornecedores[0].Nome)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Fornecedor[0].CNPJ)
+                @Html.DisplayNameFor(model => model.Fornecedores[0].CNPJ)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Fornecedor[0].Endereco)
+                @Html.DisplayNameFor(model => model.Fornecedores[0].Endereco)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Fornecedor[0].Telefone)
+                @Html.DisplayNameFor(model => model.Fornecedores[0].Telefone)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Fornecedor[0].Email)
+                @Html.DisplayNameFor(model => model.Fornecedores[0].Email)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Fornecedor[0].DataCadastro)
-            </th>
+            
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Fornecedor) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CNPJ)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Endereco)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Telefone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataCadastro)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.FornecedorID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.FornecedorID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.FornecedorID">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Fornecedores)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CNPJ)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Endereco)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+               
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.FornecedorID">Editar</a> |
+                    <a asp-page="./Details" asp-route-id="@item.FornecedorID">Detalhes</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.FornecedorID">Excluir</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

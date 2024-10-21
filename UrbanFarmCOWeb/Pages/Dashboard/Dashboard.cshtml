@@ -1,0 +1,36 @@
+﻿@page
+@model UrbanFarmCOWeb.Pages.Dashboard.DashboardModel
+@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "_Layout";
+}
+
+<p>Aqui você pode navegar pelo sistema:</p>
+
+<h1>Dashboard</h1>
+
+<ul>
+    <li><a asp-page="/Fornecedores/Index">Gerenciar Fornecedores</a></li>
+    <li><a asp-page="/Funcionarios/Index">Gerenciar Funcionários</a></li>
+    <li><a asp-page="/Produtos/Index">Gerenciar Produtos</a></li>
+</ul>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <a class="btn btn-primary btn-block" href="/Produtos/Index">Gerenciar Produtos</a>
+        </div>
+        <div class="col-md-4">
+            <a class="btn btn-primary btn-block" href="/Fornecedores/Index">Gerenciar Fornecedores</a>
+        </div>
+        <div class="col-md-4">
+            <a class="btn btn-primary btn-block" href="/Funcionarios/Index">Gerenciar Funcionários</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <a class="btn btn-danger btn-block" href="/Login/Login">Logout</a>
+            </div>
+    </div>
+</div>

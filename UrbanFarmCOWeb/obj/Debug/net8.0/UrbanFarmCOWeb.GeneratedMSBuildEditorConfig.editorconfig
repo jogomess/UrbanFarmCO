@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmCOWeb
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/jonat/source/repos/UrbanFarmCO/UrbanFarmCOWeb/Pages/Dashboard/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXERhc2hib2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/jonat/source/repos/UrbanFarmCO/UrbanFarmCOWeb/Pages/Fornecedores/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9ybmVjZWRvcmVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -66,36 +70,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRnVuY2lvbmFyaW9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonat/source/repos/UrbanFarmCO/UrbanFarmCOWeb/Pages/Produtos/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b3NcQ3JlYXRlLmNzaHRtbA==
+[C:/Users/jonat/source/repos/UrbanFarmCO/UrbanFarmCOWeb/Pages/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonat/source/repos/UrbanFarmCO/UrbanFarmCOWeb/Pages/Produtos/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b3NcRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/jonat/source/repos/UrbanFarmCO/UrbanFarmCOWeb/Pages/Produtos/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b3NcRGV0YWlscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/jonat/source/repos/UrbanFarmCO/UrbanFarmCOWeb/Pages/Produtos/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b3NcRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/jonat/source/repos/UrbanFarmCO/UrbanFarmCOWeb/Pages/Produtos/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b3NcRXJyb3IuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/jonat/source/repos/UrbanFarmCO/UrbanFarmCOWeb/Pages/Produtos/Home.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b3NcSG9tZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/jonat/source/repos/UrbanFarmCO/UrbanFarmCOWeb/Pages/Produtos/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b3NcUHJpdmFjeS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/jonat/source/repos/UrbanFarmCO/UrbanFarmCOWeb/Pages/Produtos/ProdutoIndexModel.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b3NcUHJvZHV0b0luZGV4TW9kZWwuY3NodG1s
+[C:/Users/jonat/source/repos/UrbanFarmCO/UrbanFarmCOWeb/Pages/Logout/Logoutcshtml.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0XExvZ291dGNzaHRtbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/jonat/source/repos/UrbanFarmCO/UrbanFarmCOWeb/Pages/Shared/_ValidationScriptsPartial.cshtml]

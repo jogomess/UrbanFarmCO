@@ -5,7 +5,7 @@ VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrbanFarmCO", "UrbanFarmCO\UrbanFarmCO.csproj", "{A37865C4-2821-4D0E-A9E4-0F9B50CF97E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrbanFarmCOWeb", "UrbanFarmCOWeb\UrbanFarmCOWeb.csproj", "{27C1791E-AA20-40C1-8F58-E2B265EE6C9B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UrbanFarmCOWeb", "UrbanFarmCOWeb\UrbanFarmCOWeb.csproj", "{27C1791E-AA20-40C1-8F58-E2B265EE6C9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
