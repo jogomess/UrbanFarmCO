@@ -30,6 +30,14 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXERhc2hib2FyZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/jonat/source/repos/UrbanFarmCO/UrbanFarmCOWeb/Pages/Dashboard/ExportExcel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXEV4cG9ydEV4Y2VsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jonat/source/repos/UrbanFarmCO/UrbanFarmCOWeb/Pages/Dashboard/ExportPdf.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXEV4cG9ydFBkZi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/jonat/source/repos/UrbanFarmCO/UrbanFarmCOWeb/Pages/Fornecedores/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9ybmVjZWRvcmVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

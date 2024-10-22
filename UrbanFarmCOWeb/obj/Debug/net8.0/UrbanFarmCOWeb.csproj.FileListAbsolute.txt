@@ -257,3 +257,13 @@ C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmCOWeb\obj\Debug\net8.0\refint\U
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmCOWeb\obj\Debug\net8.0\UrbanFarmCOWeb.pdb
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmCOWeb\obj\Debug\net8.0\UrbanFarmCOWeb.genruntimeconfig.cache
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmCOWeb\obj\Debug\net8.0\ref\UrbanFarmCOWeb.dll
+C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmCOWeb\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmCOWeb\bin\Debug\net8.0\EPPlus.dll
+C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmCOWeb\bin\Debug\net8.0\EPPlus.Interfaces.dll
+C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmCOWeb\bin\Debug\net8.0\EPPlus.System.Drawing.dll
+C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmCOWeb\bin\Debug\net8.0\itextsharp.dll
+C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmCOWeb\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmCOWeb\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmCOWeb\bin\Debug\net8.0\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmCOWeb\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmCOWeb\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
