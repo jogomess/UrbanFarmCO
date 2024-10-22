@@ -41,10 +41,11 @@ namespace UrbanFarmCOWeb.Pages.Login
                 {
                     // Configure a autenticação do usuário
                     var claims = new List<Claim>
-                    {
-                        new Claim(ClaimTypes.Name, user.Nome),
-                        new Claim(ClaimTypes.Email, user.Email)
-                    };
+            {
+                new Claim(ClaimTypes.Name, user.Nome),
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim("NivelAcesso", user.NivelAcesso.ToString()) // Adiciona o nível de acesso como claim
+            };
 
                     var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                     await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
@@ -64,5 +65,6 @@ namespace UrbanFarmCOWeb.Pages.Login
 
             return Page();
         }
+
     }
 }

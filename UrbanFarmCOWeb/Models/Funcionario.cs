@@ -7,8 +7,9 @@
         public string CPF { get; set; }
         public DateTime DataNascimento { get; set; }
         public string Email { get; set; }
+        public string Funcao { get; set; }
         public string SenhaHash { get; set; }
-        public string Funcao { get; set; } // Aqui está a mudança
         public DateTime DataCadastro { get; set; }
+        public int NivelAcesso { get; set; } // Adiciona o campo para definir o nível de acesso
     }
 }
