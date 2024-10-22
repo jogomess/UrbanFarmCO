@@ -54,11 +54,14 @@
                 </td>
                
                 <td>
-                    <a asp-page="./Edit" asp-route-id="@item.FornecedorID">Editar</a> |
+                    <a asp-page="./Edit" asp-rou    te-id="@item.FornecedorID">Editar</a> |
                     <a asp-page="./Details" asp-route-id="@item.FornecedorID">Detalhes</a> |
                     <a asp-page="./Delete" asp-route-id="@item.FornecedorID">Excluir</a>
                 </td>
             </tr>
         }
     </tbody>
+    <div class="form-group">
+        <button type="button" class="btn btn-secondary" onclick="window.location.href='@Url.Page("/Dashboard/Dashboard")'">Voltar para Dashbboard</button>
+    </div>
 </table>

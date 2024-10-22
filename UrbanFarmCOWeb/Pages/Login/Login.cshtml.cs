@@ -5,9 +5,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using UrbanFarmCOWeb.Data;
-using UrbanFarmCOWeb.Models;
 
-namespace UrbanFarmCOWeb.Pages
+namespace UrbanFarmCOWeb.Pages.Login
 {
     public class LoginModel : PageModel
     {
@@ -32,14 +31,15 @@ namespace UrbanFarmCOWeb.Pages
 
         public async Task<IActionResult> OnPostAsync()
         {
-            if (ModelState.IsValid)
+            if (!string.IsNullOrEmpty(Email) && !string.IsNullOrEmpty(Senha))
             {
-                // Verificar se o usuário existe no banco de dados
+                // Tenta encontrar o usuário no banco de dados
                 var user = await _context.Funcionarios
-                                         .FirstOrDefaultAsync(f => f.Email == Email && f.SenhaHash == Senha);
+                    .FirstOrDefaultAsync(f => f.Email == Email && f.SenhaHash == Senha);
+
                 if (user != null)
                 {
-                    // Configurar a autenticação do usuário
+                    // Configure a autenticação do usuário
                     var claims = new List<Claim>
                     {
                         new Claim(ClaimTypes.Name, user.Nome),
@@ -49,7 +49,7 @@ namespace UrbanFarmCOWeb.Pages
                     var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                     await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
 
-                    // Redirecionar para o Dashboard
+                    // Redireciona para o Dashboard após login bem-sucedido
                     return RedirectToPage("/Dashboard/Dashboard");
                 }
                 else
@@ -57,6 +57,11 @@ namespace UrbanFarmCOWeb.Pages
                     ErrorMessage = "Usuário ou senha inválidos.";
                 }
             }
+            else
+            {
+                ErrorMessage = "Por favor, preencha ambos os campos.";
+            }
+
             return Page();
         }
     }

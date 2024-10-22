@@ -1,0 +1,20 @@
+﻿@page
+@model UrbanFarmCOWeb.Pages.Login.EsqueciSenhaModel
+
+@{
+    ViewData["Title"] = "Esqueci a Senha";
+    Layout = "_Layout";
+}
+
+<h2>Esqueci a Senha</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Email">Informe seu Email</label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+</form>

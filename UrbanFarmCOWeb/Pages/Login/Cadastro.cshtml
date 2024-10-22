@@ -1,0 +1,48 @@
+﻿@page
+@model UrbanFarmCOWeb.Pages.Login.CadastroModel
+
+@{
+    ViewData["Title"] = "Cadastro de Colaborador";
+    Layout = "_Layout";
+}
+
+<h2>Cadastro de Colaborador</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Funcionario.Nome"></label>
+        <input asp-for="Funcionario.Nome" class="form-control" />
+        <span asp-validation-for="Funcionario.Nome" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Funcionario.CPF"></label>
+        <input asp-for="Funcionario.CPF" class="form-control" />
+        <span asp-validation-for="Funcionario.CPF" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Funcionario.Email"></label>
+        <input asp-for="Funcionario.Email" type="email" class="form-control" />
+        <span asp-validation-for="Funcionario.Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Funcionario.DataNascimento"></label>
+        <input asp-for="Funcionario.DataNascimento" type="date" class="form-control" />
+        <span asp-validation-for="Funcionario.DataNascimento" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Funcionario.SenhaHash"></label>
+        <input asp-for="Funcionario.SenhaHash" type="password" class="form-control" />
+        <span asp-validation-for="Funcionario.SenhaHash" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Funcionario.Funcao"></label>
+        <input asp-for="Funcionario.Funcao" class="form-control" />
+        <span asp-validation-for="Funcionario.Funcao" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </div>
+    <div class="form-group">
+        <button type="button" class="btn btn-secondary" onclick="window.location.href='@Url.Page("/Login/Login")'">Voltar para Login</button>
+    </div>
+</form>

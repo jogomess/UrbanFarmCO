@@ -1,5 +1,5 @@
 ﻿@page
-@model UrbanFarmCOWeb.Pages.LoginModel
+@model UrbanFarmCOWeb.Pages.Login.LoginModel
 
 @{
     ViewData["Title"] = "Login";
@@ -10,19 +10,39 @@
 
 <form method="post">
     <div class="form-group">
-        <label asp-for="Email"></label>
-        <input asp-for="Email" class="form-control" />
+        <label asp-for="Email">E-mail</label>
+        <input asp-for="Email" class="form-control" type="email" />
+        <span asp-validation-for="Email" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Senha"></label>
-        <input asp-for="Senha" type="password" class="form-control" />
+        <label asp-for="Senha">Senha</label>
+        <input asp-for="Senha" type="password" class="form-control" id="passwordInput" />
+        <span asp-validation-for="Senha" class="text-danger"></span>
+    </div>
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="mostrarSenha" onclick="mostrarSenhaFunc()">
+        <label class="form-check-label" for="mostrarSenha">Mostrar Senha</label>
     </div>
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Entrar</button>
     </div>
+    <div class="form-group">
+        <button type="button" class="btn btn-secondary" onclick="window.location.href='@Url.Page("/Login/Cadastro")'">Cadastrar</button>
+    </div>
+    <div class="form-group">
+        <button type="button" class="btn btn-link" onclick="window.location.href='@Url.Page("/Login/EsqueciSenha")'">Esqueci a Senha</button>
+    </div>
 </form>
 
-@if (!string.IsNullOrEmpty(Model.ErrorMessage))
-{
-    <div class="alert alert-danger">@Model.ErrorMessage</div>
+@section Scripts {
+        <script>
+            function mostrarSenhaFunc() {
+                var senhaInput = document.getElementById("passwordInput");
+                if (senhaInput.type === "password") {
+                    senhaInput.type = "text";
+                } else {
+                    senhaInput.type = "password";
+                }
+            }
+        </script>
 }

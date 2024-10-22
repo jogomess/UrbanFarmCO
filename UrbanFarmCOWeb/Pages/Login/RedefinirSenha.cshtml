@@ -1,0 +1,28 @@
+﻿@page "{email}"
+@model UrbanFarmCOWeb.Pages.Login.RedefinirSenhaModel
+
+@{
+    ViewData["Title"] = "Redefinir Senha";
+    Layout = "_Layout";
+}
+
+<h2>Redefinir Senha</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="NovaSenha">Nova Senha</label>
+        <input asp-for="NovaSenha" type="password" class="form-control" />
+        <span asp-validation-for="NovaSenha" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ConfirmarSenha">Confirmar Nova Senha</label>
+        <input asp-for="ConfirmarSenha" type="password" class="form-control" />
+        <span asp-validation-for="ConfirmarSenha" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Redefinir Senha</button>
+    </div>
+    <div class="form-group">
+        <button type="button" class="btn btn-secondary" onclick="window.location.href='@Url.Page("/Login/Login")'">Voltar para Login</button>
+    </div>
+</form>
