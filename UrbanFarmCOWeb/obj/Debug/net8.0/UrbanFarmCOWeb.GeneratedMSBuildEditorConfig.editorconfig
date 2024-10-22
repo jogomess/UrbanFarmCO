@@ -74,8 +74,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonat/source/repos/UrbanFarmCO/UrbanFarmCOWeb/Pages/Logout/Logoutcshtml.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0XExvZ291dGNzaHRtbC5jc2h0bWw=
+[C:/Users/jonat/source/repos/UrbanFarmCO/UrbanFarmCOWeb/Pages/Produtos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jonat/source/repos/UrbanFarmCO/UrbanFarmCOWeb/Pages/Produtos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jonat/source/repos/UrbanFarmCO/UrbanFarmCOWeb/Pages/Produtos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jonat/source/repos/UrbanFarmCO/UrbanFarmCOWeb/Pages/Produtos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jonat/source/repos/UrbanFarmCO/UrbanFarmCOWeb/Pages/Produtos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/jonat/source/repos/UrbanFarmCO/UrbanFarmCOWeb/Pages/Shared/_ValidationScriptsPartial.cshtml]
