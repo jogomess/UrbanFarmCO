@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UrbanFarmCOWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+225954986fa450f9b4f2079c046ae90d912a9b43")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bd5e982435c8ce4e0a32cc280938edb123e81c82")]
 [assembly: System.Reflection.AssemblyProductAttribute("UrbanFarmCOWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UrbanFarmCOWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

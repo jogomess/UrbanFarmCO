@@ -57,6 +57,12 @@ namespace UrbanFarmCOWeb.Pages.Login
                 {
                     ErrorMessage = "Usuário ou senha inválidos.";
                 }
+                if (user == null)
+                {
+                    ErrorMessage = "Usuário ou senha incorretos.";
+                    return Page();
+                }
+
             }
             else
             {

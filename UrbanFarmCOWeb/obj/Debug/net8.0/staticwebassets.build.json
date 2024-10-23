@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JuMuUZvJePyu6G4/yMOzufC8Yx8UKZPxCnC1IDVPxQw=",
+  "Hash": "4K7mqPeAZxczSZdsKYMu8lBm+q/Ro3m8VNRqUxKgm7s=",
   "Source": "UrbanFarmCOWeb",
   "BasePath": "_content/UrbanFarmCOWeb",
   "Mode": "Default",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Captura_de_tela_2024-10-16_165655-removebg-preview.png.png"
+    },
+    {
+      "Identity": "C:\\Users\\jonat\\source\\repos\\UrbanFarmCO\\UrbanFarmCOWeb\\wwwroot\\images\\stardew-valley-bus-moewalls-com.mp4",
+      "SourceId": "UrbanFarmCOWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jonat\\source\\repos\\UrbanFarmCO\\UrbanFarmCOWeb\\wwwroot\\",
+      "BasePath": "_content/UrbanFarmCOWeb",
+      "RelativePath": "images/stardew-valley-bus-moewalls-com.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\stardew-valley-bus-moewalls-com.mp4"
     },
     {
       "Identity": "C:\\Users\\jonat\\source\\repos\\UrbanFarmCO\\UrbanFarmCOWeb\\wwwroot\\js\\site.js",

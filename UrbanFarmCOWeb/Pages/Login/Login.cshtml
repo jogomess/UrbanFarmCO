@@ -7,7 +7,7 @@
 }
 
 <!-- Container do Login -->
-<div class="container">
+<div class="container animate__animated animate__fadeInUp">
     <div class="row justify-content-center">
         <div class="col-md-6">
             <!-- Logo com Animação -->
@@ -19,6 +19,14 @@
                      asp-append-version="true">
                 <h2 class="animate__animated animate__fadeInDown">Login</h2>
             </div>
+
+            <!-- Mensagem de Erro -->
+            @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+            {
+                <div id="errorMessage" class="alert alert-danger animate__animated animate__shakeX">
+                    @Model.ErrorMessage
+                </div>
+            }
 
             <!-- Formulário de Login -->
             <form method="post" id="loginForm">
@@ -37,15 +45,25 @@
                     <label class="form-check-label" for="mostrarSenha">Mostrar Senha</label>
                 </div>
                 <div class="form-group mb-3">
-                    <button type="submit" class="btn btn-primary w-100 animate__animated animate__pulse animate__infinite">Entrar</button>
+                    <button type="submit" class="btn btn-primary w-100 animate__animated animate__pulse">Entrar</button>
                 </div>
                 <div class="form-group d-flex justify-content-between animate__animated animate__fadeIn">
                     <!-- Link para a página de cadastro -->
-                    <button type="button" class="btn btn-secondary" onclick="window.location.href='@Url.Page("/Login/Cadastro")'">Cadastrar</button>
+                    <button type="button" class="btn btn-secondary" onclick="window.location.href='@Url.Page("/Login/Cadastro")'">
+                        <i class="fas fa-user-plus"></i> Cadastrar
+                    </button>
                     <!-- Link para a página de esqueci a senha -->
-                    <button type="button" class="btn btn-link" onclick="window.location.href='@Url.Page("/Login/EsqueciSenha")'">Esqueci a Senha</button>
+                    <button type="button" class="btn btn-link" onclick="window.location.href='@Url.Page("/Login/EsqueciSenha")'">
+                        <i class="fas fa-unlock-alt"></i> Esqueci a Senha
+                    </button>
                 </div>
             </form>
+
+            <!-- Spinner de Carregamento -->
+            <div id="loadingSpinner" class="text-center mt-3" style="display: none;">
+                <i class="fas fa-spinner fa-spin fa-3x"></i>
+                <p>Carregando...</p>
+            </div>
         </div>
     </div>
 </div>
@@ -72,18 +90,33 @@
             let validationPassed = true;
 
             if (!email) {
-                alert("Por favor, insira o email.");
+                showError("Por favor, insira o email.");
                 validationPassed = false;
             }
             if (!password) {
-                alert("Por favor, insira a senha.");
+                showError("Por favor, insira a senha.");
                 validationPassed = false;
             }
 
             if (!validationPassed) {
                 event.preventDefault(); // Impede o envio do formulário se houver campos vazios
+            } else {
+                document.getElementById("loginForm").style.display = "none";
+                document.getElementById("loadingSpinner").style.display = "block";
             }
         });
+
+        // Mostrar Mensagem de Erro
+        function showError(message) {
+            const errorMessage = document.getElementById("errorMessage");
+            errorMessage.textContent = message;
+            errorMessage.style.display = "block";
+
+            // Reaplicar animação se o erro ocorrer novamente
+            errorMessage.classList.remove("animate__shakeX");
+            void errorMessage.offsetWidth; // Reflow para reiniciar a animação
+            errorMessage.classList.add("animate__shakeX");
+        }
 
         // Animação de Pulse ao Passar o Mouse sobre o Botão "Entrar"
         document.querySelector('.btn-primary').addEventListener('mouseenter', function () {
