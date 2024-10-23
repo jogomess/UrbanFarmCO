@@ -2,50 +2,36 @@
 @model UrbanFarmCOWeb.Pages.Fornecedor.DetailsModel
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalhes do Fornecedor";
     Layout = "_Layout";
 }
 
-<h1>Details</h1>
+<div class="container my-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 class="text-center mb-4">Detalhes do Fornecedor</h2>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-3 fw-bold">Nome do Fornecedor:</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Fornecedor.Nome)</dd>
 
-<div>
-    <h4>Fornecedor</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Fornecedor.Nome)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Fornecedor.Nome)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Fornecedor.CNPJ)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Fornecedor.CNPJ)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Fornecedor.Endereco)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Fornecedor.Endereco)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Fornecedor.Telefone)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Fornecedor.Telefone)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Fornecedor.Email)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Fornecedor.Email)
-        </dd>
-     
-    </dl>
-</div>
-<div>
-    <a asp-page="./Edit" asp-route-id="@Model.Fornecedor.FornecedorID">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+                <dt class="col-sm-3 fw-bold">CNPJ:</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Fornecedor.CNPJ)</dd>
+
+                <dt class="col-sm-3 fw-bold">Endereço:</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Fornecedor.Endereco)</dd>
+
+                <dt class="col-sm-3 fw-bold">Telefone:</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Fornecedor.Telefone)</dd>
+
+                <dt class="col-sm-3 fw-bold">E-mail:</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Fornecedor.Email)</dd>
+            </dl>
+
+            <div class="d-flex justify-content-center mt-4">
+                <a asp-page="./Edit" asp-route-id="@Model.Fornecedor.FornecedorID" class="btn btn-warning me-3">Editar</a>
+                <a asp-page="./Index" class="btn btn-secondary">Voltar à Lista</a>
+            </div>
+        </div>
+    </div>
 </div>

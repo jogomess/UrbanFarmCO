@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\jonat\\source\\repos\\UrbanFarmCO\\UrbanFarmCOWeb\\wwwroot\\images\\Captura_de_tela_2024-10-16_165655-removebg-preview.png.png",
+      "PackagePath": "staticwebassets\\images\\Captura_de_tela_2024-10-16_165655-removebg-preview.png.png"
+    },
+    {
       "Id": "C:\\Users\\jonat\\source\\repos\\UrbanFarmCO\\UrbanFarmCOWeb\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

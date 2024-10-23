@@ -1,67 +1,52 @@
 ﻿@page
-@model UrbanFarmCOWeb.Pages.Fornecedor.IndexModel
+@model UrbanFarmCOWeb.Pages.Fornecedores.IndexModel
 
 @{
-    ViewData["Title"] = "Lista de Fornecedores";
+    ViewData["Title"] = "Gerenciar Fornecedores";
     Layout = "_Layout";
 }
 
-<h1>Fornecedores</h1>
+<div class="container my-4">
+    <h2 class="text-center mb-4">Lista de Fornecedores</h2>
 
-<p>
-    <a asp-page="Create">Adicionar Novo Fornecedor</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Fornecedores[0].Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Fornecedores[0].CNPJ)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Fornecedores[0].Endereco)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Fornecedores[0].Telefone)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Fornecedores[0].Email)
-            </th>
-            
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.Fornecedores)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nome)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CNPJ)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Endereco)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Telefone)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Email)
-                </td>
-               
-                <td>
-                    <a asp-page="./Edit" asp-rou    te-id="@item.FornecedorID">Editar</a> |
-                    <a asp-page="./Details" asp-route-id="@item.FornecedorID">Detalhes</a> |
-                    <a asp-page="./Delete" asp-route-id="@item.FornecedorID">Excluir</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-    <div class="form-group">
-        <button type="button" class="btn btn-secondary" onclick="window.location.href='@Url.Page("/Dashboard/Dashboard")'">Voltar para Dashbboard</button>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <a asp-page="/Fornecedores/Create" class="btn btn-success">Adicionar Novo Fornecedor</a>
+        <form method="get" class="form-inline d-flex">
+            <input type="text" name="SearchTerm" value="@Model.SearchTerm" class="form-control me-2" placeholder="Pesquisar Fornecedor" />
+            <button type="submit" class="btn btn-outline-primary">Pesquisar</button>
+        </form>
     </div>
-</table>
+
+    <table class="table table-bordered table-striped table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Fornecedores[0].Nome)</th>
+                <th>@Html.DisplayNameFor(model => model.Fornecedores[0].CNPJ)</th>
+                <th>@Html.DisplayNameFor(model => model.Fornecedores[0].Endereco)</th>
+                <th>@Html.DisplayNameFor(model => model.Fornecedores[0].Telefone)</th>
+                <th>@Html.DisplayNameFor(model => model.Fornecedores[0].Email)</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Fornecedores)
+            {
+                <tr>
+                    <td>@item.Nome</td>
+                    <td>@item.CNPJ</td>
+                    <td>@item.Endereco</td>
+                    <td>@item.Telefone</td>
+                    <td>@item.Email</td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@item.FornecedorID" class="btn btn-primary btn-sm">Editar</a>
+                        <a asp-page="./Details" asp-route-id="@item.FornecedorID" class="btn btn-info btn-sm ms-2">Detalhes</a>
+                        <a asp-page="./Delete" asp-route-id="@item.FornecedorID" class="btn btn-danger btn-sm ms-2">Excluir</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="mt-4">
+        <button type="button" class="btn btn-secondary" onclick="window.location.href='@Url.Page("/Dashboard/Dashboard")'">Voltar para Dashboard</button>
+    </div>
+</div>

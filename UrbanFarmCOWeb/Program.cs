@@ -48,6 +48,9 @@ app.Use(async (context, next) =>
     }
 });
 
+app.MapGet("/", async context => await Task.Run(() => context.Response.Redirect("/Login/Login")));
+
+
 app.MapRazorPages();
 
 app.Run();

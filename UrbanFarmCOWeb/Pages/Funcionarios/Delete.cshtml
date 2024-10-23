@@ -2,64 +2,72 @@
 @model UrbanFarmCOWeb.Pages.Funcionarios.DeleteModel
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Deletar Funcionário";
     Layout = "_Layout";
 }
 
-<h1>Delete</h1>
+<div class="container my-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 class="text-center my-4 text-danger">Deletar Funcionário</h2>
+            <h4 class="text-center">Tem certeza que deseja excluir este funcionário?</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-4 fw-bold">
+                    @Html.DisplayNameFor(model => model.Funcionario.Nome)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Funcionario.Nome)
+                </dd>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Funcionario</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Funcionario.Nome)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Funcionario.Nome)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Funcionario.CPF)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Funcionario.CPF)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Funcionario.DataNascimento)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Funcionario.DataNascimento)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Funcionario.Email)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Funcionario.Email)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Funcionario.Funcao)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Funcionario.Funcao)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Funcionario.SenhaHash)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Funcionario.SenhaHash)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Funcionario.DataCadastro)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Funcionario.DataCadastro)
-        </dd>
-    </dl>
-    
-    <form method="post">
-        <input type="hidden" asp-for="Funcionario.FuncionarioID" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-page="./Index">Back to List</a>
-    </form>
+                <dt class="col-sm-4 fw-bold">
+                    @Html.DisplayNameFor(model => model.Funcionario.CPF)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Funcionario.CPF)
+                </dd>
+
+                <dt class="col-sm-4 fw-bold">
+                    @Html.DisplayNameFor(model => model.Funcionario.DataNascimento)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Funcionario.DataNascimento)
+                </dd>
+
+                <dt class="col-sm-4 fw-bold">
+                    @Html.DisplayNameFor(model => model.Funcionario.Email)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Funcionario.Email)
+                </dd>
+
+                <dt class="col-sm-4 fw-bold">
+                    @Html.DisplayNameFor(model => model.Funcionario.Funcao)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Funcionario.Funcao)
+                </dd>
+
+                <dt class="col-sm-4 fw-bold">
+                    @Html.DisplayNameFor(model => model.Funcionario.SenhaHash)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Funcionario.SenhaHash)
+                </dd>
+
+                <dt class="col-sm-4 fw-bold">
+                    @Html.DisplayNameFor(model => model.Funcionario.DataCadastro)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Funcionario.DataCadastro)
+                </dd>
+            </dl>
+
+            <form method="post" class="text-center my-4">
+                <input type="hidden" asp-for="Funcionario.FuncionarioID" />
+                <button type="submit" class="btn btn-danger mx-2">Deletar</button>
+                <a asp-page="./Index" class="btn btn-secondary mx-2">Voltar para a Lista</a>
+            </form>
+        </div>
+    </div>
 </div>

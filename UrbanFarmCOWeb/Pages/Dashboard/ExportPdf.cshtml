@@ -1,4 +1,68 @@
 ﻿@page
 @model UrbanFarmCOWeb.Pages.Dashboard.ExportPdfModel
+
 @{
+    ViewData["Title"] = "Dashboard";
+    Layout = "_Layout";
+}
+
+<div class="container my-4">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="text-center animate__animated animate__fadeInDown">Dashboard</h2>
+
+            <!-- Botões de Exportar para Excel e PDF -->
+            <div class="d-flex justify-content-end my-3">
+                <a href="/Dashboard/ExportExcel" class="btn btn-outline-success me-2 animate__animated animate__zoomIn animate__slow">
+                    <i class="fas fa-file-excel"></i> Exportar para Excel
+                </a>
+                <a href="/Dashboard/ExportPdf" class="btn btn-outline-danger animate__animated animate__zoomIn animate__slow">
+                    <i class="fas fa-file-pdf"></i> Exportar para PDF
+                </a>
+            </div>
+
+            <p class="animate__animated animate__fadeInUp">Aqui você pode navegar pelo sistema:</p>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <a class="btn btn-primary btn-block mb-3 animate__animated animate__fadeInLeft" href="/Produtos/Index">Gerenciar Produtos</a>
+                </div>
+                <div class="col-md-4">
+                    <a class="btn btn-primary btn-block mb-3 animate__animated animate__fadeInLeft" href="/Fornecedores/Index">Gerenciar Fornecedores</a>
+                </div>
+                @if (User.HasClaim(c => c.Type == "NivelAcesso" && c.Value == "1")) // Verifica o nível de acesso do usuário
+                {
+                    <div class="col-md-4">
+                        <a href="/Funcionarios/Index" class="btn btn-primary btn-block mb-3 animate__animated animate__fadeInRight">Gerenciar Funcionários</a>
+                    </div>
+                }
+                else
+                {
+                    <div class="col-md-4">
+                        <p class="text-danger animate__animated animate__fadeInRight">Você não tem permissão para acessar o Gerenciamento de Funcionários.</p>
+                    </div>
+                }
+                <div class="col-md-4 mt-3">
+                    <a class="btn btn-danger btn-block animate__animated animate__shakeX" href="/Login/Login">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Link do Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+@section Scripts {
+    <script>
+        // Adiciona animações ao passar o mouse nos botões de exportação
+        document.querySelectorAll('.btn-outline-success, .btn-outline-danger').forEach(function (button) {
+            button.addEventListener('mouseenter', function () {
+                this.classList.add('animate__pulse');
+            });
+            button.addEventListener('mouseleave', function () {
+                this.classList.remove('animate__pulse');
+            });
+        });
+    </script>
 }

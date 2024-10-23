@@ -2,56 +2,59 @@
 @model UrbanFarmCOWeb.Pages.Fornecedor.EditModel
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar Fornecedor";
     Layout = "_Layout";
 }
 
-<h1>Edit</h1>
+<div class="container my-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 class="text-center mb-4">Editar Fornecedor</h2>
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+                <input type="hidden" asp-for="Fornecedor.FornecedorID" />
 
-<h4>Fornecedor</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Fornecedor.FornecedorID" />
-            <div class="form-group">
-                <label asp-for="Fornecedor.Nome" class="control-label"></label>
-                <input asp-for="Fornecedor.Nome" class="form-control" />
-                <span asp-validation-for="Fornecedor.Nome" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Fornecedor.CNPJ" class="control-label"></label>
-                <input asp-for="Fornecedor.CNPJ" class="form-control" />
-                <span asp-validation-for="Fornecedor.CNPJ" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Fornecedor.Endereco" class="control-label"></label>
-                <input asp-for="Fornecedor.Endereco" class="form-control" />
-                <span asp-validation-for="Fornecedor.Endereco" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Fornecedor.Telefone" class="control-label"></label>
-                <input asp-for="Fornecedor.Telefone" class="form-control" />
-                <span asp-validation-for="Fornecedor.Telefone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Fornecedor.Email" class="control-label"></label>
-                <input asp-for="Fornecedor.Email" class="form-control" />
-                <span asp-validation-for="Fornecedor.Email" class="text-danger"></span>
-            </div>
-            
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+                <div class="form-group mb-3">
+                    <label asp-for="Fornecedor.Nome" class="form-label">Nome do Fornecedor</label>
+                    <input asp-for="Fornecedor.Nome" class="form-control" />
+                    <span asp-validation-for="Fornecedor.Nome" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Fornecedor.CNPJ" class="form-label">CNPJ</label>
+                    <input asp-for="Fornecedor.CNPJ" class="form-control" />
+                    <span asp-validation-for="Fornecedor.CNPJ" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Fornecedor.Endereco" class="form-label">Endereço</label>
+                    <input asp-for="Fornecedor.Endereco" class="form-control" />
+                    <span asp-validation-for="Fornecedor.Endereco" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Fornecedor.Telefone" class="form-label">Telefone</label>
+                    <input asp-for="Fornecedor.Telefone" class="form-control" />
+                    <span asp-validation-for="Fornecedor.Telefone" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Fornecedor.Email" class="form-label">E-mail</label>
+                    <input asp-for="Fornecedor.Email" type="email" class="form-control" />
+                    <span asp-validation-for="Fornecedor.Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mt-4">
+                    <button type="submit" class="btn btn-success me-2">Salvar</button>
+                    <a asp-page="./Index" class="btn btn-secondary">Voltar à Lista</a>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-page="./Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

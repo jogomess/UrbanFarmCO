@@ -6,43 +6,51 @@
     Layout = "_Layout";
 }
 
-<h2>Cadastro de Colaborador</h2>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="text-center my-4 animate__animated animate__fadeInDown">
+                <h2>Cadastro de Colaborador</h2>
+            </div>
 
-<form method="post">
-    <div class="form-group">
-        <label asp-for="Funcionario.Nome"></label>
-        <input asp-for="Funcionario.Nome" class="form-control" />
-        <span asp-validation-for="Funcionario.Nome" class="text-danger"></span>
+            <form method="post" class="animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="form-group mb-3">
+                    <label asp-for="Funcionario.Nome" class="form-label">Nome</label>
+                    <input asp-for="Funcionario.Nome" class="form-control animate__animated animate__fadeIn animate__delay-2s" />
+                    <span asp-validation-for="Funcionario.Nome" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="Funcionario.CPF" class="form-label">CPF</label>
+                    <input asp-for="Funcionario.CPF" class="form-control animate__animated animate__fadeIn animate__delay-2s" />
+                    <span asp-validation-for="Funcionario.CPF" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="Funcionario.Email" class="form-label">E-mail</label>
+                    <input asp-for="Funcionario.Email" type="email" class="form-control animate__animated animate__fadeIn animate__delay-2s" />
+                    <span asp-validation-for="Funcionario.Email" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="Funcionario.DataNascimento" class="form-label">Data de Nascimento</label>
+                    <input asp-for="Funcionario.DataNascimento" type="date" class="form-control animate__animated animate__fadeIn animate__delay-2s" />
+                    <span asp-validation-for="Funcionario.DataNascimento" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="Funcionario.SenhaHash" class="form-label">Senha</label>
+                    <input asp-for="Funcionario.SenhaHash" type="password" class="form-control animate__animated animate__fadeIn animate__delay-2s" />
+                    <span asp-validation-for="Funcionario.SenhaHash" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="Funcionario.Funcao" class="form-label">Função</label>
+                    <input asp-for="Funcionario.Funcao" class="form-control animate__animated animate__fadeIn animate__delay-2s" />
+                    <span asp-validation-for="Funcionario.Funcao" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <button type="submit" class="btn btn-primary w-100 animate__animated animate__pulse animate__infinite">Cadastrar</button>
+                </div>
+                <div class="form-group mb-3">
+                    <button type="button" class="btn btn-secondary w-100 animate__animated animate__fadeInUp animate__delay-3s" onclick="window.location.href='@Url.Page("/Login/Login")'">Voltar para Login</button>
+                </div>
+            </form>
+        </div>
     </div>
-    <div class="form-group">
-        <label asp-for="Funcionario.CPF"></label>
-        <input asp-for="Funcionario.CPF" class="form-control" />
-        <span asp-validation-for="Funcionario.CPF" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Funcionario.Email"></label>
-        <input asp-for="Funcionario.Email" type="email" class="form-control" />
-        <span asp-validation-for="Funcionario.Email" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Funcionario.DataNascimento"></label>
-        <input asp-for="Funcionario.DataNascimento" type="date" class="form-control" />
-        <span asp-validation-for="Funcionario.DataNascimento" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Funcionario.SenhaHash"></label>
-        <input asp-for="Funcionario.SenhaHash" type="password" class="form-control" />
-        <span asp-validation-for="Funcionario.SenhaHash" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Funcionario.Funcao"></label>
-        <input asp-for="Funcionario.Funcao" class="form-control" />
-        <span asp-validation-for="Funcionario.Funcao" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary">Cadastrar</button>
-    </div>
-    <div class="form-group">
-        <button type="button" class="btn btn-secondary" onclick="window.location.href='@Url.Page("/Login/Login")'">Voltar para Login</button>
-    </div>
-</form>
+</div>

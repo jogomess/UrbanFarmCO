@@ -3,46 +3,95 @@
 
 @{
     ViewData["Title"] = "Login";
-    Layout = "_Layout"; // Pode definir o layout que preferir
+    Layout = "_Layout";
 }
 
-<h2>Login</h2>
+<!-- Container do Login -->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <!-- Logo com Animação -->
+            <div class="text-center my-4">
+                <img src="~/images/Captura_de_tela_2024-10-16_165655-removebg-preview.png.png"
+                     alt="Logo Urban Farm"
+                     class="img-fluid mb-4 animate__animated animate__zoomIn"
+                     style="max-width: 200px;"
+                     asp-append-version="true">
+                <h2 class="animate__animated animate__fadeInDown">Login</h2>
+            </div>
 
-<form method="post">
-    <div class="form-group">
-        <label asp-for="Email">E-mail</label>
-        <input asp-for="Email" class="form-control" type="email" />
-        <span asp-validation-for="Email" class="text-danger"></span>
+            <!-- Formulário de Login -->
+            <form method="post" id="loginForm">
+                <div class="form-group mb-3 animate__animated animate__fadeInLeft">
+                    <label asp-for="Email" class="form-label">E-mail</label>
+                    <input asp-for="Email" class="form-control" type="email" id="email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3 animate__animated animate__fadeInRight">
+                    <label asp-for="Senha" class="form-label">Senha</label>
+                    <input asp-for="Senha" type="password" class="form-control" id="passwordInput" />
+                    <span asp-validation-for="Senha" class="text-danger"></span>
+                </div>
+                <div class="form-group form-check mb-3 animate__animated animate__fadeInUp">
+                    <input type="checkbox" class="form-check-input" id="mostrarSenha" onclick="mostrarSenhaFunc()">
+                    <label class="form-check-label" for="mostrarSenha">Mostrar Senha</label>
+                </div>
+                <div class="form-group mb-3">
+                    <button type="submit" class="btn btn-primary w-100 animate__animated animate__pulse animate__infinite">Entrar</button>
+                </div>
+                <div class="form-group d-flex justify-content-between animate__animated animate__fadeIn">
+                    <!-- Link para a página de cadastro -->
+                    <button type="button" class="btn btn-secondary" onclick="window.location.href='@Url.Page("/Login/Cadastro")'">Cadastrar</button>
+                    <!-- Link para a página de esqueci a senha -->
+                    <button type="button" class="btn btn-link" onclick="window.location.href='@Url.Page("/Login/EsqueciSenha")'">Esqueci a Senha</button>
+                </div>
+            </form>
+        </div>
     </div>
-    <div class="form-group">
-        <label asp-for="Senha">Senha</label>
-        <input asp-for="Senha" type="password" class="form-control" id="passwordInput" />
-        <span asp-validation-for="Senha" class="text-danger"></span>
-    </div>
-    <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="mostrarSenha" onclick="mostrarSenhaFunc()">
-        <label class="form-check-label" for="mostrarSenha">Mostrar Senha</label>
-    </div>
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary">Entrar</button>
-    </div>
-    <div class="form-group">
-        <button type="button" class="btn btn-secondary" onclick="window.location.href='@Url.Page("/Login/Cadastro")'">Cadastrar</button>
-    </div>
-    <div class="form-group">
-        <button type="button" class="btn btn-link" onclick="window.location.href='@Url.Page("/Login/EsqueciSenha")'">Esqueci a Senha</button>
-    </div>
-</form>
+</div>
+
+<!-- Link do Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 @section Scripts {
-        <script>
-            function mostrarSenhaFunc() {
-                var senhaInput = document.getElementById("passwordInput");
-                if (senhaInput.type === "password") {
-                    senhaInput.type = "text";
-                } else {
-                    senhaInput.type = "password";
-                }
+    <!-- JavaScript para Mostrar/Ocultar Senha -->
+    <script>
+        function mostrarSenhaFunc() {
+            var senhaInput = document.getElementById("passwordInput");
+            if (senhaInput.type === "password") {
+                senhaInput.type = "text";
+            } else {
+                senhaInput.type = "password";
             }
-        </script>
+        }
+
+        // Validação de Campos antes de Enviar
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("passwordInput").value;
+            let validationPassed = true;
+
+            if (!email) {
+                alert("Por favor, insira o email.");
+                validationPassed = false;
+            }
+            if (!password) {
+                alert("Por favor, insira a senha.");
+                validationPassed = false;
+            }
+
+            if (!validationPassed) {
+                event.preventDefault(); // Impede o envio do formulário se houver campos vazios
+            }
+        });
+
+        // Animação de Pulse ao Passar o Mouse sobre o Botão "Entrar"
+        document.querySelector('.btn-primary').addEventListener('mouseenter', function () {
+            this.classList.add('animate__pulse');
+        });
+
+        document.querySelector('.btn-primary').addEventListener('mouseleave', function () {
+            this.classList.remove('animate__pulse');
+        });
+    </script>
 }
