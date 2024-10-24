@@ -22,6 +22,7 @@
                         <th>@Html.DisplayNameFor(model => model.Funcionario[0].Email)</th>
                         <th>@Html.DisplayNameFor(model => model.Funcionario[0].Funcao)</th>
                         <th>@Html.DisplayNameFor(model => model.Funcionario[0].DataCadastro)</th>
+                        <th>@Html.DisplayNameFor(model => model.Funcionario[0].NivelAcesso)</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
@@ -35,6 +36,7 @@
                             <td>@Html.DisplayFor(modelItem => item.Email)</td>
                             <td>@Html.DisplayFor(modelItem => item.Funcao)</td>
                             <td>@Html.DisplayFor(modelItem => item.DataCadastro)</td>
+                            <td>@Html.DisplayFor(modelItem => item.NivelAcesso)</td>
                             <td>
                                 <a asp-page="./Edit" asp-route-id="@item.FuncionarioID" class="btn btn-warning btn-sm">Editar</a>
                                 <a asp-page="./Details" asp-route-id="@item.FuncionarioID" class="btn btn-info btn-sm">Detalhes</a>

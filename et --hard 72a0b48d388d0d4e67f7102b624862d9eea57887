@@ -1,0 +1,53 @@
+[33mcommit 72a0b48d388d0d4e67f7102b624862d9eea57887[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Jonathan Gomes <jonathanchagas2004@gmail.com>
+Date:   Wed Oct 23 16:35:25 2024 -0300
+
+    Adicionado CSS Animado, e melhora visual na Dashboard
+
+[33mcommit bd5e982435c8ce4e0a32cc280938edb123e81c82[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Jonathan Gomes <jonathanchagas2004@gmail.com>
+Date:   Wed Oct 23 15:22:24 2024 -0300
+
+    Adicionando funções de CSS e Bootstrap no Login e Dashboard
+
+[33mcommit 225954986fa450f9b4f2079c046ae90d912a9b43[m
+Author: Jonathan Gomes <jonathanchagas2004@gmail.com>
+Date:   Tue Oct 22 17:39:37 2024 -0300
+
+    Adicionado BootStrap
+
+[33mcommit 4b0ab07b5660acf59077ea10d5d9117e0a5b2dd2[m
+Author: Jonathan Gomes <jonathanchagas2004@gmail.com>
+Date:   Tue Oct 22 16:04:58 2024 -0300
+
+    Atualização das funcionalidades de Dashboard sobre nivek de acesso
+
+[33mcommit c5629d9aae52eaf214802d8ad8aaa984d6515ac8[m
+Author: Jonathan Gomes <jonathanchagas2004@gmail.com>
+Date:   Tue Oct 22 15:34:38 2024 -0300
+
+    Implementação da tela de Login e ajustes no sistema de autenticação
+
+[33mcommit 5515e787ec9880a4502cb9caccfbfcabe1f98ff3[m
+Author: Jonathan Gomes <jonathanchagas2004@gmail.com>
+Date:   Tue Oct 22 12:59:47 2024 -0300
+
+    Adicionar funcionalidade de gerenciar Produtos
+
+[33mcommit c33ca033eec97dccca82ff7a610cfb04f0ef7697[m
+Author: Jonathan Gomes <jonathanchagas2004@gmail.com>
+Date:   Mon Oct 21 17:31:35 2024 -0300
+
+    Adiciona funcionalidade de logout e melhorias na página de dashboard
+
+[33mcommit 230e8e99213bcfe201096fd550464b711030645a[m
+Author: Jonathan Gomes <jonathanchagas2004@gmail.com>
+Date:   Sun Oct 20 00:21:01 2024 -0300
+
+    Atualizando .gitignore para ignorar arquivos indesejados
+
+[33mcommit 8e2ee04e75aef05c479c1329017b26fe03685aae[m
+Author: Jonathan Gomes <jonathanchagas2004@gmail.com>
+Date:   Sun Oct 20 00:16:42 2024 -0300
+
+    Adicionando projetos UrbanFarmCO e UrbanFarmCOWeb ao repositório

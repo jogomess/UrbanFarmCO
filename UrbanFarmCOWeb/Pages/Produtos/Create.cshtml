@@ -40,9 +40,8 @@
 
                 <div class="form-group mb-3">
                     <label asp-for="Produto.FornecedorID" class="form-label">Fornecedor</label>
-                    <select asp-for="Produto.FornecedorID" class="form-control">
+                    <select asp-for="Produto.FornecedorID" class="form-control" asp-items="Model.FornecedoresSelectList">
                         <option value="">Selecione um fornecedor</option>
-                        <!-- Aqui você deve preencher as opções com os fornecedores disponíveis -->
                     </select>
                     <span asp-validation-for="Produto.FornecedorID" class="text-danger"></span>
                 </div>

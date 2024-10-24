@@ -12,26 +12,30 @@ namespace UrbanFarmCOWeb.Pages.Produtos
 {
     public class CreateModel : PageModel
     {
-        private readonly UrbanFarmCOWeb.Data.UrbanFarmDbContext _context;
+        private readonly UrbanFarmDbContext _context;
 
-        public CreateModel(UrbanFarmCOWeb.Data.UrbanFarmDbContext context)
+        public CreateModel(UrbanFarmDbContext context)
         {
             _context = context;
-        }
-
-        public IActionResult OnGet()
-        {
-            return Page();
         }
 
         [BindProperty]
         public Produto Produto { get; set; } = default!;
 
-        // For more information, see https://aka.ms/RazorPagesCRUD.
+        public SelectList FornecedoresSelectList { get; set; } = default!;
+
+        public IActionResult OnGet()
+        {
+            FornecedoresSelectList = new SelectList(_context.Fornecedores, "FornecedorID", "Nome");
+            return Page();
+        }
+
+        // Para mais informações, veja https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
             {
+                FornecedoresSelectList = new SelectList(_context.Fornecedores, "FornecedorID", "Nome");
                 return Page();
             }
 
