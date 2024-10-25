@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:UrbanFarmMobile.Views"
+    x:Class="UrbanFarmMobile.AppShell"
+    Shell.FlyoutBehavior="Disabled"
+    Title="UrbanFarmMobile">
+
+    <!-- Definindo a página inicial como a página de Login -->
+    <ShellContent
+        Title="Login"
+        ContentTemplate="{DataTemplate views:LoginPage}"
+        Route="LoginPage" />
+
+    <!-- Definindo a rota para a Dashboard -->
+    <ShellContent
+        Title="Dashboard"
+        ContentTemplate="{DataTemplate views:DashboardPage}"
+        Route="DashboardPage" />
+
+    <!-- Definindo a rota para a Fornecedor -->
+    <ShellContent
+    Title="Fornecedores"
+    ContentTemplate="{DataTemplate views:FornecedoresPage}"
+    Route="FornecedoresPage" />
+
+    <ShellContent
+    Title="Funcionários"
+    ContentTemplate="{DataTemplate views:FuncionarioPage}"
+    Route="FuncionarioPage" />
+
+    <ShellContent
+    Title="Produtos"
+    ContentTemplate="{DataTemplate views:ProdutoPage}"
+    Route="ProdutoPage" />
+
+
+
+</Shell>

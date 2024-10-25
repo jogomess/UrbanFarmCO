@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:UrbanFarmMobile.Views"
+             x:Class="UrbanFarmMobile.Views.FornecedoresPage"
+             Title="Fornecedores">
+
+    <StackLayout Padding="20">
+        <Label Text="Fornecedores"
+               FontSize="Large"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               VerticalOptions="Start" />
+
+        <!-- Botão para Adicionar Novo Fornecedor -->
+        <Button Text="Adicionar Novo Fornecedor"
+                Command="{Binding AddFornecedorCommand}"
+                BackgroundColor="Green"
+                TextColor="White"
+                CornerRadius="20"
+                HorizontalOptions="Fill"
+                Margin="0, 20, 0, 20"
+                HeightRequest="50"/>
+
+        <!-- Lista de Fornecedores -->
+        <CollectionView ItemsSource="{Binding Fornecedores}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="Gray"
+                           CornerRadius="10"
+                           Margin="0, 10"
+                           Padding="10">
+                        <StackLayout>
+                            <Label Text="{Binding Nome}" 
+                                   FontSize="Medium" 
+                                   FontAttributes="Bold"/>
+                            <Label Text="{Binding Email}" 
+                                   FontSize="Small" 
+                                   TextColor="Gray" />
+                            <Button Text="Editar"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.EditFornecedorCommand}"
+                                    CommandParameter="{Binding .}"
+                                    BackgroundColor="Blue"
+                                    TextColor="White"
+                                    CornerRadius="20"
+                                    HeightRequest="40"/>
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+
+</ContentPage>
