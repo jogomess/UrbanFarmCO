@@ -1,7 +1,6 @@
-﻿using System.Windows.Input;
+﻿using Microsoft.Maui.Controls;
+using System.Windows.Input;
 using UrbanFarmMobile.Services;
-using UrbanFarmMobile.Models;
-using Microsoft.Maui.Controls;
 
 namespace UrbanFarmMobile.ViewModels
 {
@@ -10,6 +9,7 @@ namespace UrbanFarmMobile.ViewModels
         private readonly ApiService _apiService;
         private string _email;
         private string _password;
+        private string _errorMessage;
 
         public string Email
         {
@@ -23,40 +23,40 @@ namespace UrbanFarmMobile.ViewModels
             set => SetProperty(ref _password, value);
         }
 
-        public ICommand LoginCommand { get; }
-        public ICommand RegisterCommand { get; }
+        public string ErrorMessage
+        {
+            get => _errorMessage;
+            set => SetProperty(ref _errorMessage, value);
+        }
+
+        public ICommand EntrarCommand { get; }
 
         public LoginViewModel()
         {
             _apiService = new ApiService();
-            LoginCommand = new Command(OnLoginClicked);
-            RegisterCommand = new Command(OnRegisterClicked);
+            EntrarCommand = new Command(OnEntrar);
         }
 
-        private async void OnLoginClicked()
+        private async void OnEntrar()
         {
             if (string.IsNullOrEmpty(Email) || string.IsNullOrEmpty(Password))
             {
-                await Application.Current.MainPage.DisplayAlert("Erro", "Por favor, insira o e-mail e a senha.", "OK");
+                ErrorMessage = "E-mail e senha são obrigatórios.";
                 return;
             }
 
-            var response = await _apiService.LoginAsync(Email, Password);
-            if (response != null && response.Success)
+            var loginResult = await _apiService.LoginAsync(Email, Password);
+
+            if (loginResult.Success)
             {
-                // Navegar para a página inicial após login bem-sucedido
-                await Shell.Current.GoToAsync("//DashboardPage");
+                // Redirecionar diretamente para a Dashboard após o login bem-sucedido
+                await Shell.Current.GoToAsync("//Views/DashboardPage");
             }
             else
             {
-                await Application.Current.MainPage.DisplayAlert("Erro", "E-mail ou senha incorretos.", "OK");
+                // Exibir mensagem de erro ao usuário
+                ErrorMessage = loginResult.Message;
             }
-        }
-
-        private async void OnRegisterClicked()
-        {
-            // Lógica para navegar para a página de registro
-            await Shell.Current.GoToAsync("//RegisterPage");
         }
     }
 }

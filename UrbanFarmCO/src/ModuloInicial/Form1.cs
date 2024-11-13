@@ -225,6 +225,13 @@ namespace UrbanFarmCO
 
             MessageBox.Show("Relatório de Fornecedores em PDF gerado com sucesso!");
         }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Close(); // Fecha o Form1
+        }
     }
 }
 

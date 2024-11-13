@@ -35,7 +35,7 @@
             this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatórioFornecedorEmPDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatórioFornecedorEmExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vendasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,10 +47,10 @@
             this.produtosToolStripMenuItem,
             this.colaboradoresToolStripMenuItem,
             this.relatóriosToolStripMenuItem,
-            this.vendasToolStripMenuItem});
+            this.sairToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(528, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(769, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -98,18 +98,20 @@
             this.relatórioFornecedorEmExcelToolStripMenuItem.Text = "Relatório Fornecedor em Excel";
             this.relatórioFornecedorEmExcelToolStripMenuItem.Click += new System.EventHandler(this.relatórioFornecedorEmExcelToolStripMenuItem_Click);
             // 
-            // vendasToolStripMenuItem
+            // sairToolStripMenuItem
             // 
-            this.vendasToolStripMenuItem.Name = "vendasToolStripMenuItem";
-            this.vendasToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
-            this.vendasToolStripMenuItem.Text = "Vendas";
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(48, 24);
+            this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(528, 450);
+            this.ClientSize = new System.Drawing.Size(769, 450);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -127,10 +129,10 @@
         private System.Windows.Forms.ToolStripMenuItem fornecedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatóriosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem vendasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem colaboradoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatórioFornecedorEmPDFToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatórioFornecedorEmExcelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
     }
 }
 

@@ -333,6 +333,11 @@
     <None Include="src\Resources\Urban Farm CO1.png" />
     <None Include="src\Resources\Urban Farm CO.png" />
     <None Include="src\Resources\Captura_de_tela_2024-10-16_165655-removebg-preview.png1.png" />
+    <None Include="Resources\Urban_Farm_CO-removebg-preview %281%29.png" />
+    <None Include="Resources\Urban_Farm_CO-removebg-preview.png" />
+    <None Include="Resources\Captura de tela 2024-10-16 165655.png" />
+    <None Include="Resources\Captura de tela 2024-10-16 1656551.png" />
+    <None Include="Resources\Captura_de_tela_2024-10-16_165655-removebg-preview.png.png" />
     <Content Include="src\Urban Farm CO.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

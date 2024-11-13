@@ -1,11 +1,17 @@
 using UrbanFarmAPI.Data;
 using Microsoft.EntityFrameworkCore;
 
-
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins", builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
 // Configurar o serviço de DbContext com SQL Server
 builder.Services.AddDbContext<UrbanFarmDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -14,10 +20,10 @@ builder.Services.AddDbContext<UrbanFarmDbContext>(options =>
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-
+    
 var app = builder.Build();
 
+app.UseCors("AllowAllOrigins");
 // Configuração de middleware
 if (app.Environment.IsDevelopment())
 {

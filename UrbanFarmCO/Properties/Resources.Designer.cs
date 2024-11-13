@@ -59,5 +59,55 @@ namespace UrbanFarmCO.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_tela_2024_10_16_165655 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de tela 2024-10-16 165655", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_tela_2024_10_16_165655_removebg_preview_png {
+            get {
+                object obj = ResourceManager.GetObject("Captura_de_tela_2024-10-16_165655-removebg-preview.png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_tela_2024_10_16_1656551 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de tela 2024-10-16 1656551", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Urban_Farm_CO_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Urban_Farm_CO-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Urban_Farm_CO_removebg_preview__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Urban_Farm_CO-removebg-preview (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

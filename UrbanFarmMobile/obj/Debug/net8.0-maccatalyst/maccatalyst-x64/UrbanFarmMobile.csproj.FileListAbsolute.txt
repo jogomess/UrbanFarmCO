@@ -258,6 +258,9 @@ C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccata
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauifont.inputs
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauisplash.inputs
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauisplash.stamp
+C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@3x.png
+C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@2x.png
+C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot.png
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appiconItunesArtwork.png
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon83.5x83.5@2x.png
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon76x76@2x.png
@@ -270,9 +273,6 @@ C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccata
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@3x.png
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@2x.png
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
-C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@3x.png
-C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@2x.png
-C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot.png
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauiimage.stamp
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauiimage.outputs
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\f\MauiInfo.plist
@@ -288,6 +288,8 @@ C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccata
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\_ProcessedBundleResourcesPath.items
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\_ProcessedContentPath.items
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\UrbanFarmMobile.csproj.AssemblyReference.cache
+C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\UrbanFarmMobile.Properties.Resources.resources
+C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\UrbanFarmMobile.csproj.GenerateResource.cache
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\UrbanFarmMobile.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\UrbanFarmMobile.AssemblyInfoInputs.cache
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\UrbanFarmMobile.AssemblyInfo.cs

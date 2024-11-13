@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Json;
@@ -14,14 +14,14 @@ namespace UrbanFarmMobile.Services
         public ApiService()
         {
             _httpClient = new HttpClient();
-            _httpClient.BaseAddress = new Uri("https://sua-api-url.com/"); // Altere para sua URL base da API
+            _httpClient.BaseAddress = new Uri("http://10.0.2.2:5078"); // Altere para sua URL base da API
         }
 
         public async Task<APIResponse<List<Fornecedor>>> GetFornecedoresAsync()
         {
             try
             {
-                var response = await _httpClient.GetAsync("api/fornecedores");
+                var response = await _httpClient.GetAsync("api/Fornecedores");
                 if (response.IsSuccessStatusCode)
                 {
                     var fornecedores = await response.Content.ReadFromJsonAsync<List<Fornecedor>>();
@@ -42,7 +42,7 @@ namespace UrbanFarmMobile.Services
         {
             try
             {
-                var response = await _httpClient.GetAsync("api/funcionarios");
+                var response = await _httpClient.GetAsync("api/Funcionarios");
                 if (response.IsSuccessStatusCode)
                 {
                     var funcionarios = await response.Content.ReadFromJsonAsync<List<Funcionario>>();
@@ -63,7 +63,7 @@ namespace UrbanFarmMobile.Services
         {
             try
             {
-                var response = await _httpClient.GetAsync("api/produtos");
+                var response = await _httpClient.GetAsync("api/Produtos");
                 if (response.IsSuccessStatusCode)
                 {
                     var produtos = await response.Content.ReadFromJsonAsync<List<Produto>>();
@@ -82,24 +82,37 @@ namespace UrbanFarmMobile.Services
 
         public async Task<APIResponse<Funcionario>> LoginAsync(string email, string senha)
         {
-            var funcionarioLogin = new { Email = email, SenhaHash = senha };
+            var loginRequest = new { Email = email, Senha = senha };
 
             try
             {
-                var response = await _httpClient.PostAsJsonAsync("api/login", funcionarioLogin);
+                var response = await _httpClient.PostAsJsonAsync("api/Funcionarios/login", loginRequest);
                 if (response.IsSuccessStatusCode)
                 {
                     var funcionario = await response.Content.ReadFromJsonAsync<Funcionario>();
-                    return new APIResponse<Funcionario> { Success = true, Data = funcionario, Message = "Login bem-sucedido" };
+                    return new APIResponse<Funcionario>
+                    {
+                        Success = true,
+                        Data = funcionario,
+                        Message = "Login bem-sucedido"
+                    };
                 }
                 else
                 {
-                    return new APIResponse<Funcionario> { Success = false, Message = "E-mail ou senha incorretos" };
+                    return new APIResponse<Funcionario>
+                    {
+                        Success = false,
+                        Message = $"E-mail ou senha incorretos. Status Code: {response.StatusCode}, Reason: {response.ReasonPhrase}"
+                    };
                 }
             }
             catch (Exception ex)
             {
-                return new APIResponse<Funcionario> { Success = false, Message = ex.Message };
+                return new APIResponse<Funcionario>
+                {
+                    Success = false,
+                    Message = $"Erro de conexão: {ex.Message}"
+                };
             }
         }
     }

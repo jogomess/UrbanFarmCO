@@ -22,10 +22,15 @@ namespace UrbanFarmMobile.ViewModels
             EditFornecedorCommand = new Command<Fornecedor>(OnEditFornecedor);
 
             // Carregar dados
-            LoadFornecedores();
+            LoadFornecedoresAsync();
         }
 
-        private async void LoadFornecedores()
+        private async void LoadFornecedoresAsync()
+        {
+            await LoadFornecedores();
+        }
+
+        private async Task LoadFornecedores()
         {
             var fornecedoresResponse = await _apiService.GetFornecedoresAsync();
             if (fornecedoresResponse != null && fornecedoresResponse.Success)

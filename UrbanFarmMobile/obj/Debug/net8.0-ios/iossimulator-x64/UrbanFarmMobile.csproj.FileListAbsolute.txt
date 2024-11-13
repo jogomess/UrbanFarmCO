@@ -259,7 +259,6 @@ C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\bin\Debug\net8.0-ios\ios
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\bin\Debug\net8.0-ios\iossimulator-x64\libxamarin-dotnet-nativeaot.a
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\bin\Debug\net8.0-ios\iossimulator-x64\libxamarin-dotnet.a
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\bin\Debug\net8.0-ios\iossimulator-x64\libxamarin-dotnet.dylib
-C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-ios\iossimulator-x64\build-signature\signature
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-ios\iossimulator-x64\mauiimage.inputs
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-ios\iossimulator-x64\mauifont.inputs
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-ios\iossimulator-x64\mauisplash.inputs
@@ -301,6 +300,8 @@ C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-ios\ios
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-ios\iossimulator-x64\_ProcessedBundleResourcesPath.items
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-ios\iossimulator-x64\_ProcessedContentPath.items
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-ios\iossimulator-x64\UrbanFarmMobile.csproj.AssemblyReference.cache
+C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-ios\iossimulator-x64\UrbanFarmMobile.Properties.Resources.resources
+C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-ios\iossimulator-x64\UrbanFarmMobile.csproj.GenerateResource.cache
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-ios\iossimulator-x64\UrbanFarmMobile.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-ios\iossimulator-x64\UrbanFarmMobile.AssemblyInfoInputs.cache
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmMobile\obj\Debug\net8.0-ios\iossimulator-x64\UrbanFarmMobile.AssemblyInfo.cs
