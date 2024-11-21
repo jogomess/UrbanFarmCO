@@ -49,3 +49,4 @@ C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmCO\obj\Debug\UrbanFarmCO.csproj
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmCO\obj\Debug\UrbanFar.B212DAF1.Up2Date
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmCO\obj\Debug\UrbanFarmCO.exe
 C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmCO\obj\Debug\UrbanFarmCO.pdb
+C:\Users\jonat\source\repos\UrbanFarmCO\UrbanFarmCO\obj\Debug\UrbanFarmCO.src.ModuloVendas.FormsVenda.resources

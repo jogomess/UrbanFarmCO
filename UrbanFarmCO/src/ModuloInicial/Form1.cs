@@ -12,6 +12,7 @@ using iTextSharp.text.pdf;
 using System.IO;
 using ClosedXML.Excel;
 using System.Data.SqlClient;
+using UrbanFarmCO.src.ModuloVendas;
 
 
 namespace UrbanFarmCO
@@ -231,6 +232,12 @@ namespace UrbanFarmCO
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
             this.Close(); // Fecha o Form1
+        }
+
+        private void vendasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormsVenda formsVenda = new FormsVenda();
+            formsVenda.ShowDialog();
         }
     }
 }
